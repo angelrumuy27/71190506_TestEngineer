@@ -29,7 +29,8 @@ public class UserServiceImpITest {
         UserServiceImpl sut = new UserServiceImpl(userDAO, securityService);
 //        Mockito.when(userDAO.updateUser(user)).thenReturn("71190506");
 //        System.out.println(userDAO.updateUser(user));
-        userDAO.updateUser(user);
+//        userDAO.updateUser(user);
+        sut.assignPassword(user);
         Mockito.verify(userDAO).updateUser(user);
 
 
